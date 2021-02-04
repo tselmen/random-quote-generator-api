@@ -6,7 +6,7 @@ import dotenv from "dotenv"
 import Quote from "./models/Quote.js";
 import quoteRoutes from "./routes/quotes.js"
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT;
 dotenv.config();
 
 app.use(bodyParser.json({limit: "30mb", extended: true}));
